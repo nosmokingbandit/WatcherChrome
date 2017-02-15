@@ -1,0 +1,95 @@
+/* logo button next to title of movie */
+div#watcher_add{
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+div#watcher_add img{
+    height: 36px;
+    vertical-align: bottom;
+}
+
+/* add movie modal */
+div#watcher_popup{
+    color: #212121;
+    padding: 1em;
+    background: #eee;
+    position: absolute;
+    border: 1px solid #bdbdbd;
+    top: 0;
+    left: 118px;
+    display: none;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+div#watcher_popup img{
+    height: 1.5em;
+}
+
+div#watcher_popup:after, div#watcher_popup:before {
+	right: 100%;
+	top: 25%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+div#watcher_popup:after {
+	border-color: rgba(238, 238, 238, 0);
+	border-right-color: #eee;
+	border-width: 8px;
+	margin-top: -8px;
+}
+div#watcher_popup:before {
+	border-color: rgba(189, 189, 189, 0);
+	border-right-color: #bdbdbd;
+	border-width: 9px;
+	margin-top: -9px;
+}
+
+div#watcher_response{
+    white-space: nowrap;
+    display: inline-block;
+}
+
+div.subtext{
+    clear: both;
+}
+
+/* loading animation */
+#watcher_thinker {
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    background-color: #212121;
+    position:absolute;
+    bottom: calc(50% - 0.5em);
+    right: calc(50% - 0.5em);
+    -webkit-animation: sk-scaleout 2.0s infinite ease-in-out;
+    animation: sk-scaleout 2.0s infinite ease-in-out;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% { -webkit-transform: scale(5.8);
+        opacity: 0;
+        }
+}
+
+@keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% { -webkit-transform: scale(5.8);
+            transform: scale(5.8);
+            opacity: 0;
+            }
+}

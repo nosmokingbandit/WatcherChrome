@@ -1,0 +1,40 @@
+{
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.imdb.com/title/*",
+                "https://www.imdb.com/title/*"
+            ],
+            "js": [
+                "js/jquery-3.1.1.min.js",
+                "js/imdb_injector.js"
+            ],
+            "css": [
+                "css/imdb_injector.css",
+                "css/font-awesome.min.css"
+            ]
+        }
+    ],
+    "name": "Watcher",
+    "description": "Official Watcher Chrome Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/",
+        "storage",
+        "http://*/"
+    ],
+    "web_accessible_resources": [
+        "images/icon_add.png",
+        "images/icon_disabled.png",
+        "images/icon_send.png"
+    ]
+
+
+}
