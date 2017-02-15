@@ -3,8 +3,8 @@ $(document).ready(function() {
 	var icon_add = chrome.extension.getURL('../images/logo_48.png');
 	var icon_send = chrome.extension.getURL('../images/icon_send.png');
 	var icon_close = chrome.extension.getURL('../images/icon_close.png');
-	var imdbid = $('div#star-rating-widget').attr('data-tconst');
-	var title = $.trim($("h1[itemprop=name]").text());
+	var tmdbid = $('meta[property="og:url"').attr('content').split('/')[4].split('-')[0]
+	var title = $.trim($('h2.movie a').text());
 
 	var $button = $(`<div id="watcher_add" title="Add to Watcher">
 					<img src='${icon_close}' id='watcher_icon_close'/>
@@ -23,7 +23,7 @@ $(document).ready(function() {
 					</div>
 				 </div>`);
 
-	$('h1[itemprop="name"]').prepend($button);
+	$('div.title').prepend($button);
 	var $close_button = $('img#watcher_icon_close');
 	var $popup = $('div#watcher_popup');
 	var $select = $('select#watcher_quality');

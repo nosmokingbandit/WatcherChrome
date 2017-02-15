@@ -19,11 +19,12 @@ function save_options() {
     apikey: apikey
   }, function() {
     // Update status to let user know options were saved.
-    var status = document.getElementById('status');
-    status.textContent = 'Options saved.';
+    $status = $('span#status');
+    $status.text('Settings Saved');
+    $status.fadeIn();
     setTimeout(function() {
-      status.textContent = '';
-    }, 750);
+      $status.fadeOut();
+  }, 1500);
   });
 }
 

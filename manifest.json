@@ -10,18 +10,30 @@
                 "js/imdb_injector.js"
             ],
             "css": [
-                "css/imdb_injector.css",
-                "css/font-awesome.min.css"
+                "css/imdb_injector.css"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.themoviedb.org/movie/*",
+                "http://www.themoviedb.org/movie/*"
+            ],
+            "js": [
+                "js/jquery-3.1.1.min.js",
+                "js/tmdb_injector.js"
+            ],
+            "css": [
+                "css/tmdb_injector.css"
             ]
         }
+
     ],
     "name": "Watcher",
     "description": "Official Watcher Chrome Extension",
     "version": "1.0",
     "manifest_version": 2,
     "browser_action": {
-        "default_icon": "images/icon.png",
-        "default_popup": "popup.html"
+        "default_icon": "images/menu_bar.png"
     },
     "options_page": "options.html",
     "permissions": [
@@ -31,10 +43,22 @@
         "http://*/"
     ],
     "web_accessible_resources": [
-        "images/icon_add.png",
-        "images/icon_disabled.png",
-        "images/icon_send.png"
-    ]
+        "images/logo_48.png",
+        "images/icon_48_disabled.png",
+        "images/icon_send.png",
+        "images/icon_close.png"
+    ],
+    "background": {
+        "scripts": [
+            "js/jquery-3.1.1.min.js",
+            "js/background.js"
+
+        ]
+    },
+    "icons": {
+        "48": "images/logo_48.png",
+        "128": "images/logo_128.png"
+    }
 
 
 }

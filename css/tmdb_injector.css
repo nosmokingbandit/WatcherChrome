@@ -1,9 +1,8 @@
 /* logo button next to title of movie */
 div#watcher_add{
     float: left;
+    margin: 0.5em 0.5em 0 0;
     z-index:10;
-    margin-right: 0.12em;
-    display: flex;
 }
 
 div#watcher_add select{
@@ -11,11 +10,9 @@ div#watcher_add select{
 }
 
 div#watcher_add img{
-    cursor: pointer;
-    height: 1em;
-    margin: 0;
-    padding: 0;
+    height: 2.4em;
     vertical-align: bottom;
+    cursor: pointer;
 }
 
 div#watcher_add img#watcher_icon_close{
@@ -23,16 +20,21 @@ div#watcher_add img#watcher_icon_close{
     display: none;
 }
 
+
+div#watcher_popup img#watcher_send{
+    height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
 /* add movie modal */
 div#watcher_popup{
-    font-size: 0.4em;
     color: #212121;
     padding: 1em;
     background: #eee;
     position: absolute;
     border: 1px solid #bdbdbd;
     top: 0;
-    left: 8.1em;
+    left: 3.0em;
     display: none;
     z-index: 10;
     border-radius: 4px;
@@ -45,7 +47,7 @@ div#watcher_popup div{
 
 div#watcher_popup:after, div#watcher_popup:before {
 	right: 100%;
-	top: 1.25em;
+	top: 1.75em;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -65,12 +67,6 @@ div#watcher_popup:before {
 	border-right-color: #bdbdbd;
 	border-width: 9px;
 	margin-top: -9px;
-}
-
-
-div#watcher_popup img#watcher_send{
-    height: 1.5em;
-    margin-bottom: 0.5em;
 }
 
 div#watcher_response{

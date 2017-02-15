@@ -4,30 +4,36 @@
     <title>Watcher Options</title>
     <script type='text/javascript' src='js/jquery-3.1.1.min.js'></script>
     <script type='text/javascript' src='js/options.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/options.css'></link>
 </head>
 <body>
 
 <div id='header'>
-    <img scr='images/icon.png'/>
+    <img src='images/logo_128.png'/>
+    Watcher
 </div>
 
 <table>
     <tr>
-        <td>Watcher Address:</td>
+        <td class='name'>Watcher Address:</td>
         <td>
             <input id='address' type='text'/>
         </td>
     </tr>
     <tr>
-        <td>Watcher API Key:</td>
+        <td class='name'>Watcher API Key:</td>
         <td>
             <input id='apikey' type='text'/>
         </td>
     </tr>
 </table>
 
-<button id='save'>Save</button>
-<div id='status'></div>
+<div id='submit'>
+    <button id='save'>Save</button>
+    <br/>
+    <br/>
+    <span id='status'></div>
+</div>
 
 
 </body>
